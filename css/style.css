@@ -1,11 +1,67 @@
 /*--- Global ---*/
+:root {
+  --bg-main: #1c1c1c;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/*--- Navigation ---*/
+nav ul {
+  display: flex;
+  padding: 0;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  margin-right: 0.5em;
+}
+
+nav ul li:last-of-type a {
+  margin-right: 0;
+}
 
 /*--- Header ---*/
 header {
-    background-color: green;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  background-color: white;
 }
+
 .header_flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*--- Main ---*/
+section {
+  min-height: 100vh;
+}
+section:nth-of-type(2n) {
+  background-color: var(--bg-main);
+  color: #fff;
+}
+
+/*--- Footer ---*/
+footer {
+  background-color: #fff;
+}
+
+.footer_flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
