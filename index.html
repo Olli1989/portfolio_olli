@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Porfolio Olli</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/grid.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -12,35 +18,33 @@
   <body>
     <header>
       <div class="container header_flex">
-        <h1>Logo</h1>
+        <a href="#"><h1>Logo</h1></a>
         <nav>
           <ul>
-            <li><a href="#">Who</a></li>
-            <li><a href="#">What</a></li>
-            <li><a href="#">Work</a></li>
-            <li><a href="#">Skill</a></li>
+            <li><a href="#who">who</a></li>
+            <li><a href="#what">what</a></li>
+            <li><a href="#skill">skill</a></li>
+            <li><a href="#work">work</a></li>
           </ul>
         </nav>
-        <a href="#">Contact</a>
+        <a href="#contact">Contact</a>
       </div>
       <!-- End of Container -->
     </header>
 
     <main>
-      <section class="who">
+      <section class="who" id="who">
         <div class="container">
           <div class="row">
-            <div class="col-4">
-              <div class="who_skills">
-                <img src="" alt="React" />
-                <img src="" alt="CSS" />
-                <img src="" alt="HTML" />
-              </div>
+            <div class="col-4 who_skills">
+              <img src="images/icons/html.png" alt="React" />
+              <img src="images/icons/react.png" alt="CSS" />
+              <img src="images/icons/css.png" alt="HTML" />
             </div>
-            <div class="col-4">
-              <img class="who_img" src="" alt="A picture of me" />
+            <div class="col-4 who_img">
+              <img src="images/profile.png" alt="A picture of me" />
             </div>
-            <div class="col-4">
+            <div class="col-4 who_hero">
               <div class="who_header">I am a Web Developer</div>
               <div class="who_desc">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos,
@@ -54,7 +58,12 @@
         <!-- End of Container -->
       </section>
 
-      <section class="what">
+      <section class="what" id="what">
+        <div class="container"></div>
+        <!-- End of Container -->
+      </section>
+
+      <section class="skill" id="skill">
         <div class="container">
           <div class="row">
             <div class="col-6">
@@ -68,35 +77,44 @@
         <!-- End of Container -->
       </section>
 
-      <section class="work">
+      <section class="work" id="work">
         <div class="container"></div>
         <!-- End of Container -->
       </section>
 
-      <section class="contact">
-        <div class="container">
-          <h2>Contact me</h2>
-          <div class="row">
-            <div class="col-6 contact_form">
-              <form action="" method="post">
-                <input type="text" name="firstName" id="firstName" placeholder="First name">
-                <input type="text" name="lastName" id="lastName" placeholder="Last name">
-                <input type="email" name="email" id="email" placeholder="Your email-address">
-                <textarea name="form-text" id="form-text" cols="30" rows="10" placeholder="What's your wish?"></textarea>
-              </form>
+      <section class="contact" id="contact">
+        <div class="form-container">
+          <h2>Contact me & let's have a talk</h2>
+            
+            <div class="contact_tel-email">
+              <div class="contact_tel">
+                <img src="images/icons/mobile.png" alt="Handy logo" />
+                <a href="tel:+43555555555">+43 676 123 456</a>
+              </div>
+              <div class="contact_email">
+                <img src="images/icons/email.png" alt="Email Logo" />
+                <a href="mailto:abs@mustermann.com">abs@mustermann.com</a>
+              </div>
             </div>
-            <div class="col-6 contact_me">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2656.720865428498!2d14.312158150435767!3d48.25050055116753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4773bd8bf65d3515%3A0xc1799dc3ab4f5d18!2sAuwiesenstra%C3%9Fe%2023%2C%204030%20Linz!5e0!3m2!1sen!2sat!4v1648645488215!5m2!1sen!2sat"
-                width="600"
-                height="450"
-                style="border: 0"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div>
-          </div>
+
+            <form action="" method="post">
+              <input type="text" name="name" id="name" placeholder="Your Name" />
+              <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Your email address"
+              />
+              <textarea
+              name="form-text"
+              id="form-text"
+              cols="30"
+              rows="10"
+              placeholder="What's your wish?"
+              ></textarea>
+              <button class="form_btn" type="submit" name="submit">Let's Chat</button>
+            </form>
+
         </div>
         <!-- End of Container -->
       </section>
@@ -110,7 +128,7 @@
             <li><a href="#">Privacy</a></li>
           </ul>
         </nav>
-        <p>&copy; copywrite</p>
+        <p>&copy; 2022 - Olli</p>
       </div>
       <!-- End of Container -->
     </footer>
