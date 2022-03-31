@@ -4,6 +4,8 @@
 
   --bc-lightblue: #edf2f8;
 
+  --fc-red: rgb(97, 17, 17);
+
   --fw-400: 400;
   --fw-700: 700;
 }
@@ -36,7 +38,7 @@ header nav + a{
 
 a {
   text-decoration: none;
-  color: #000;
+  color: var(--fc-red);
 }
 
 header a:hover,
@@ -69,7 +71,7 @@ header {
   left: 0;
   right: 0;
 
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, .2);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.18);
@@ -85,7 +87,7 @@ header {
 
 /*--- Main ---*/
 section {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
 }
 section:nth-of-type(2n) {
@@ -141,6 +143,8 @@ section:nth-of-type(2n) {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 2em;
+  padding-bottom: 2em;
 }
 
 .form-container {
@@ -175,8 +179,8 @@ section:nth-of-type(2n) {
 
 .contact_tel img,
 .contact_email img{
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   margin-right: 0.5em;
 }
 
