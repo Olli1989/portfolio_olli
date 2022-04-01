@@ -31,7 +31,8 @@ body {
 }
 
 /* smooth scrolling*/
-html:focus-within {
+html:focus-within,
+html {
   scroll-behavior: smooth;
 }
 

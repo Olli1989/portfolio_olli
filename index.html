@@ -14,11 +14,13 @@
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/grid.css" />
     <link rel="stylesheet" href="css/style.css" />
+
+    <script src="index.js" defer></script>
   </head>
   <body>
     <header>
       <div class="container header_flex">
-        <a href="#"><h1>Logo</h1></a>
+        <a href="#"><h3>Logo</h3></a>
         <nav>
           <ul>
             <li><a href="#who">who</a></li>
@@ -34,43 +36,86 @@
 
     <main>
       <section class="who" id="who">
-        <div class="container">
-          <div class="row">
-            <div class="col-4 who_skills">
-              <img src="images/icons/html.png" alt="React" />
-              <img src="images/icons/react.png" alt="CSS" />
-              <img src="images/icons/css.png" alt="HTML" />
-            </div>
-            <div class="col-4 who_img">
-              <img src="images/profile.png" alt="A picture of me" />
-            </div>
-            <div class="col-4 who_hero">
-              <div class="who_header">I am a Web Developer</div>
-              <div class="who_desc">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos,
-                sapiente harum! Incidunt aperiam quos esse optio delectus?
-                Voluptas vitae iure esse repellendus, placeat culpa dolores
-                expedita. Numquam aperiam obcaecati rem.
-              </div>
-            </div>
+        <div class="who_container">
+          <div class="who_header">
+            <img src="images/dev-jane-01.jpg" alt="Jane photo" />
+
+            <h1>Hi, i am <br /><span>Olli</span></h1>
+            <p>front-end dev</p>
           </div>
         </div>
         <!-- End of Container -->
       </section>
 
-      <section class="what" id="what">
-        <div class="container"></div>
-        <!-- End of Container -->
-      </section>
+      <section class="what" id="what"></section>
 
       <section class="skill" id="skill">
         <div class="container">
+          <h2>Education & Skills</h2>
           <div class="row">
-            <div class="col-6">
-              <h2>Education & Certs</h2>
+            <div class="col-6 skill_container-edu">
+              <p>HTL Matura Informationstechnologie - HTL Paul Hahn</p>
+              <p>Frontend Carrer Path Certificate - Scrimba</p>
+              <p>
+                Responsive Web, JavaScript, Data Visualization with d3.Js
+                -freeCodeCamp
+              </p>
+              <p>Back End Technologies node.js and MongoDB - freeCodeCamp</p>
+              <p>
+                500+ hrs self studying with Projects and Video Tutorials -
+                Youtube
+              </p>
+              <p>Currently Bootcamp Web, Java and Database - CodersBay</p>
             </div>
-            <div class="col-6">
-              <h2>Skills</h2>
+            <div class="col-6 skill_container-skills">
+              <div class="skill_icon">
+                <img src="images/icons/react.png" alt="React Logo" />
+                <p>React</p>
+              </div>
+              <div class="skill_icon">
+                <img src="images/icons/redux.png" alt="Redux Logo" />
+                <p>Redux</p>
+              </div>
+              <div class="skill_icon">
+                <img src="images/icons/css.png" alt="CSS Logo" />
+                <p>CSS3</p>
+              </div>
+              <div class="skill_icon">
+                <img src="images/icons/html.png" alt="HTML Logo" />
+                <p>HTML5</p>
+              </div>
+              <div class="skill_icon">
+                <img src="images/icons/node.png" alt="Node Logo" />
+                <p>NodeJS</p>
+              </div>
+              <div class="skill_icon">
+                <img src="images/icons/figma.png" alt="Figma Logo" />
+                <p>Figma</p>
+              </div>
+              <div class="skill_icon">
+                <img src="images/icons/git.png" alt="Git Logo" />
+                <p>GIT</p>
+              </div>
+              <div class="skill_icon">
+                <img src="images/icons/api.png" alt="API Logo" />
+                <p>API</p>
+              </div>
+              <div class="skill_icon">
+                <img src="images/icons/graphql.png" alt="GraphQL Logo" />
+                <p>GraphQL</p>
+              </div>
+              <div class="skill_icon">
+                <img src="images/icons/d3.png" alt="D3 Logo" />
+                <p>D3 JS</p>
+              </div>
+              <div class="skill_icon">
+                <img src="images/icons/javascript.png" alt="JavaScript Logo" />
+                <p>JavaScript</p>
+              </div>
+              <div class="skill_icon">
+                <img src="images/icons/typescript.png" alt="Typescript Logo" />
+                <p>Typescript</p>
+              </div>
             </div>
           </div>
         </div>
@@ -78,43 +123,75 @@
       </section>
 
       <section class="work" id="work">
-        <div class="container"></div>
+        <div class="container">
+          <h2>My Portfolio Section</h2>
+          <div class="work_choose">
+            <div class="work_choose-card" data-number=1>
+              <p>React</p>
+            </div>
+            <div class="work_choose-card" data-number=2>
+              <p>CSS/HTML</p>
+            </div>
+            <div class="work_choose-card" data-number=3>
+              <p>Java</p>
+            </div>
+            <div class="work_choose-card" data-number=4>
+              <p>ALL</p>
+            </div>
+          </div>
+
+          <div class="work_grid">
+            <div class="work_card">
+              <div class="work_card-img">
+                <img src="images/about01.png" alt="" />
+              </div>
+              <div class="work_card-hero">
+                <p>React</p>
+              </div>
+              <div class="work_card-desc">
+                <h3>Instagram Clone</h3>
+                <p>Instagram Clone Tutorial with Scrimba</p>
+              </div>
+            </div>
+          </div>
+        </div>
         <!-- End of Container -->
       </section>
 
       <section class="contact" id="contact">
         <div class="form-container">
           <h2>Contact me & let's have a talk</h2>
-            
-            <div class="contact_tel-email">
-              <div class="contact_tel">
-                <img src="images/icons/mobile.png" alt="Handy logo" />
-                <a href="tel:+43555555555">+43 676 123 456</a>
-              </div>
-              <div class="contact_email">
-                <img src="images/icons/email.png" alt="Email Logo" />
-                <a href="mailto:abs@mustermann.com">oliver.straberger@gmx.at</a>
-              </div>
-            </div>
 
-            <form action="" method="post">
-              <input type="text" name="name" id="name" placeholder="Your Name" />
-              <input
+          <div class="contact_tel-email">
+            <div class="contact_tel">
+              <img src="images/icons/mobile.png" alt="Handy logo" />
+              <a href="tel:+43555555555">+43 676 123 456</a>
+            </div>
+            <div class="contact_email">
+              <img src="images/icons/email.png" alt="Email Logo" />
+              <a href="mailto:abs@mustermann.com">oliver.straberger@gmx.at</a>
+            </div>
+          </div>
+
+          <form action="" method="post">
+            <input type="text" name="name" id="name" placeholder="Your Name" />
+            <input
               type="email"
               name="email"
               id="email"
               placeholder="Your email address"
-              />
-              <textarea
+            />
+            <textarea
               name="form-text"
               id="form-text"
               cols="30"
               rows="10"
               placeholder="What's your wish?"
-              ></textarea>
-              <button class="form_btn" type="submit" name="submit">Let's Chat</button>
-            </form>
-
+            ></textarea>
+            <button class="form_btn" type="submit" name="submit">
+              Let's Chat
+            </button>
+          </form>
         </div>
         <!-- End of Container -->
       </section>

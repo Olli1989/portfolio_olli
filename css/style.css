@@ -6,6 +6,13 @@
 
   --fc-red: rgb(97, 17, 17);
 
+  --yellow: #FEE934;
+  --blue: #1546BF;
+  --lightblue: #96FFCA;
+  --red: #FB6542;
+  --lila: #621BC1;
+
+
   --fw-400: 400;
   --fw-700: 700;
 }
@@ -16,6 +23,13 @@ body {
 
   font-family: 'Montserrat', arial, sans-serif;
   font-weight: var(--fw-700);
+}
+
+h1 {
+  font-size: 4.5rem;
+  font-weight: var(--fw-400);
+
+  grid-area: text;
 }
 
 h2,
@@ -38,7 +52,7 @@ header nav + a{
 
 a {
   text-decoration: none;
-  color: var(--fc-red);
+  color: var(--red);
 }
 
 header a:hover,
@@ -71,6 +85,8 @@ header {
   left: 0;
   right: 0;
 
+  z-index: 100;
+
   background: rgba(255, 255, 255, .2);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
@@ -83,12 +99,12 @@ header {
   align-items: center;
 }
 
-
-
 /*--- Main ---*/
 section {
   min-height: 100vh;
   display: flex;
+  padding-top: 5em;
+  padding-bottom: 4em;
 }
 section:nth-of-type(2n) {
   background-color: var(--bc-lightblue);
@@ -96,59 +112,179 @@ section:nth-of-type(2n) {
 }
 
 /*--- Section Who---*/
+.who {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.who_container {
+  max-width: 60vw;
+  margin-inline: auto;
+}
 
-.who_skills {
+.who_header {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-template-areas: 
+    "img text"
+    "img desc";
+
+  gap: 1em;
+}
+
+.who_header img{
+  grid-area: img;
+  min-width: 400px;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.15);
+  margin-right: 1em;
+
+  position: relative;
+  z-index: 10;
+}
+
+.who_header h1 span {
+  font-weight: var(--fw-700);
+}
+
+.who_header p {
+  font-size: 1.5rem;
+  font-weight: var(--fw-400);
+  text-align: right;
+  background-color: var(--red);
+
+  grid-column: 1/-1;
+  grid-row: 2;
+  position: relative;
+
+  left: -1.5em;
+  width: calc(100% + 1.5em);
+
+  padding: .5em;
+  margin-bottom: 1.5em;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+
+/*--- What i do ---*/
+
+
+
+
+/*--- Education & Skill ---*/
+.skill h2 {
+  margin-bottom: 3em;
+}
+
+.skill_container-edu{
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  align-items: flex-end;
-  height: 100vh;
-  padding-right: 2em;
-  padding-top: 4em;
-}
-
-.who_skills img{
-  width: 75px;
-  background: white;
-  border-radius: 50%;
-  padding: .5em;
-  box-shadow: inset 0 0 12px rgba(0,0,0,.9);
+  justify-content: space-around;
   
+  border-right: 3px solid rgba(50, 50, 50, 0.2);
 }
 
-.who_skills img:nth-of-type(1){
-  width: 125px;
-  
+.skill_container-edu p {
+  font-size: 1.1rem;
 }
 
-.who_skills img:nth-of-type(2){
-  width: 150px;
-  margin-right: 3em;
+.skill_container-skills {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+.skill_icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.who_img{
-  align-self: center;
-  
-  border-radius: 50%;
+.skill_icon img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
 }
-.who_img img{
-  object-fit: cover;
+
+/*--- Portfolio Section ---*/
+.work_choose {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  margin-bottom: 3rem;
+}
+
+.work_choose-card {
+  margin-inline: .5em;
+  background-color: #fff;
+  border-radius: .5em;
+  transition: all 0.5s ease-in-out;
+
+  cursor: pointer;
+}
+
+.work_choose-card:hover,
+.work_choose-card:focus {
+  background-color: var(--red);
+  color: #fff;
+}
+
+
+.work_choose-card p{
+  padding: .5em 1em;
+}
+
+
+
+
+.work_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+}
+
+.work_card {
   background-color: white;
-  width: 150px;
-  height: 150px;
+  padding: 2em .5em;
+  border-radius: 8px;
 }
+
+.work_card-hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.work_card-hero p {
+  background-color: #fff;
+  padding: .5em;
+  border-radius: 7px 7px 0 0;
+  position: absolute;
+  top: -35px
+}
+
+.work_card-desc {
+    margin: 2em 0;
+    text-align: center;
+}
+
+
 
 /*--- Section Contact ---*/
 .contact {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 2em;
-  padding-bottom: 2em;
+  
 }
 
 .form-container {
-  max-width: 50vw;
+  max-width: 60vw;
+  margin-inline: auto;
 }
 
 .contact_tel-email {
@@ -184,23 +320,27 @@ section:nth-of-type(2n) {
   margin-right: 0.5em;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
 form > input,
 form textarea {
   margin-bottom: 1rem;
   border-radius: 5px;
   border: none;
   padding: 20px;
+  width: 100%;
 }
 
 textarea {
   resize: none;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  max-width: 50vw;
-}
+
 
 .form_btn {
   border: none;
