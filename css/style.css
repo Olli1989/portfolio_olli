@@ -22,7 +22,7 @@ body {
   color: #fff;
 
   font-family: 'Montserrat', arial, sans-serif;
-  font-weight: var(--fw-700);
+  font-weight: var(--fw-400);
 }
 
 h1 {
@@ -135,11 +135,12 @@ section:nth-of-type(2n) {
 .who_header img{
   grid-area: img;
   min-width: 400px;
-  box-shadow: 5px 5px 10px rgba(0,0,0,0.15);
+  box-shadow: 5px 5px 10px rgba(255,255,255,0.15);
   margin-right: 1em;
 
   position: relative;
   z-index: 10;
+
 }
 
 .who_header h1 span {
@@ -169,11 +170,27 @@ section:nth-of-type(2n) {
 
 
 /*--- What i do ---*/
+.what {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+}
+
+.what h3{
+  margin-bottom: 1.5em;
+}
 
 
 
 
 /*--- Education & Skill ---*/
+.skill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .skill h2 {
   margin-bottom: 3em;
 }
@@ -224,6 +241,10 @@ section:nth-of-type(2n) {
   transition: all 0.5s ease-in-out;
 
   cursor: pointer;
+
+  padding: .5em 1.5em;
+  border: none;
+  text-transform: uppercase;
 }
 
 .work_choose-card:hover,
@@ -232,10 +253,6 @@ section:nth-of-type(2n) {
   color: #fff;
 }
 
-
-.work_choose-card p{
-  padding: .5em 1em;
-}
 
 
 
@@ -313,11 +330,11 @@ section:nth-of-type(2n) {
   width: calc(50% - 5px);
 }
 
-.contact_tel img,
-.contact_email img{
-  width: 30px;
-  height: 30px;
-  margin-right: 0.5em;
+.contact_tel i,
+.contact_email i{
+  font-size: 1.5em;
+  color: black;
+  margin-right: .5em;
 }
 
 form {

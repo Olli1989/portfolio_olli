@@ -4,19 +4,69 @@ const workGrid = document.querySelector('.work_grid')
 
 const react = [{
   imgUrl: 'images/about01.png',
-  category: 'React1',
+  category: 'React',
   title: 'Instagram Clone',
   desc: 'Instagram Clone Tutorial with Scrimba',
   liveUrl: '',
   githubUrl: ''
+},
+{
+  imgUrl: 'images/about01.png',
+  category: 'React',
+  title: 'Quizapp',
+  desc: 'Million Dollar Show',
+  liveUrl: '',
+  githubUrl: ''
 }]
 
-const cssHtml = {
-  
+const cssHtml = [{
+  imgUrl: 'images/about01.png',
+  category: 'CSS/HTML',
+  title: 'NFT Preview Card',
+  desc: 'Frontend Mentor - NFT Preview Card',
+  liveUrl: '',
+  githubUrl: ''
+},
+{
+  imgUrl: 'images/about01.png',
+  category: 'CSS/HTML',
+  title: 'Stats Preview Card',
+  desc: 'Frontend Mentor - Stats Preview Card',
+  liveUrl: '',
+  githubUrl: ''
+},
+{
+  imgUrl: 'images/about01.png',
+  category: 'CSS/HTML',
+  title: '3 Column Preview Card',
+  desc: 'Frontend Mentor - 3 Column Preview Card',
+  liveUrl: '',
+  githubUrl: ''
+},
+{
+  imgUrl: 'images/about01.png',
+  category: 'CSS/HTML',
+  title: 'Social Proof Section',
+  desc: 'Frontend Mentor - Social Proof Section',
+  liveUrl: '',
+  githubUrl: ''
+}]
+const java = []
+
+let all = []
+
+const createAllArray = ()=> {
+  all = [...react]
+  cssHtml.map(ele => {
+    all.push(ele)
+  })
+  java.map(ele => {
+    all.push(ele)
+  })
+  console.log(all)
 }
-const java = {
-  
-}
+
+
 
 const workCardGenerater = (arr) =>{
   let html = ''
@@ -42,17 +92,21 @@ const workCardGenerater = (arr) =>{
   }
 }
 
+createAllArray()
+workCardGenerater(all)
+
 choose.forEach(item => {
-  item.addEventListener('click', () => {
-    console.log(item);
-    if (item.dataset.number == 1){
+  item.addEventListener('click', (e) => {
+    let workButton = e.target.innerText
+    if (workButton== 'REACT'){
       workCardGenerater(react)
-    } else if(item.dataset.number == 2) {
-      
-    } else if(item.dataset.number == 3) {
-
-    } else if(item.dataset.number == 4) {
-
+      console.log("allo")
+    } else if(workButton== 'CSS/HTML') {
+      workCardGenerater(cssHtml)
+    } else if(workButton== 'Java') {
+      workCardGenerater(java)
+    } else if(workButton== 'ALL') {
+      workCardGenerater(all)
     }
   })
 })

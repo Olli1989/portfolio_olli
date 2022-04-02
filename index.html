@@ -4,13 +4,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
     <title>Porfolio Olli</title>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/grid.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -38,7 +43,7 @@
       <section class="who" id="who">
         <div class="who_container">
           <div class="who_header">
-            <img src="images/dev-jane-01.jpg" alt="Jane photo" />
+            <img src="images/who-olli.jpg" alt="Olli photo" />
 
             <h1>Hi, i am <br /><span>Olli</span></h1>
             <p>front-end dev</p>
@@ -47,7 +52,41 @@
         <!-- End of Container -->
       </section>
 
-      <section class="what" id="what"></section>
+      <section class="what" id="what">
+        <div class="container">
+          <h2>What i am doing</h2>
+          <div class="row">
+            <div class="col-4">
+              <h3>Development</h3>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos
+                repellendus consectetur modi ipsum asperiores molestiae corporis
+                tempore quaerat et quae, amet quis. Ipsam temporibus iure fugit
+                sequi nobis provident vero!
+              </p>
+            </div>
+              <div class="col-4">
+                <h3>WordPress</h3>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos
+                  repellendus consectetur modi ipsum asperiores molestiae
+                  corporis tempore quaerat et quae, amet quis. Ipsam temporibus
+                  iure fugit sequi nobis provident vero!
+                </p>
+              </div>
+              <div class="col-4">
+                <h3>E-Commerce</h3>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos
+                  repellendus consectetur modi ipsum asperiores molestiae
+                  corporis tempore quaerat et quae, amet quis. Ipsam temporibus
+                  iure fugit sequi nobis provident vero!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section class="skill" id="skill">
         <div class="container">
@@ -126,18 +165,18 @@
         <div class="container">
           <h2>My Portfolio Section</h2>
           <div class="work_choose">
-            <div class="work_choose-card" data-number=1>
-              <p>React</p>
-            </div>
-            <div class="work_choose-card" data-number=2>
-              <p>CSS/HTML</p>
-            </div>
-            <div class="work_choose-card" data-number=3>
-              <p>Java</p>
-            </div>
-            <div class="work_choose-card" data-number=4>
-              <p>ALL</p>
-            </div>
+            <button class="work_choose-card">
+              React
+            </button>
+            <button class="work_choose-card">
+              CSS/HTML
+            </button>
+            <button class="work_choose-card">
+              Java
+            </button>
+            <button class="work_choose-card">
+              ALL
+            </button>
           </div>
 
           <div class="work_grid">
@@ -164,11 +203,11 @@
 
           <div class="contact_tel-email">
             <div class="contact_tel">
-              <img src="images/icons/mobile.png" alt="Handy logo" />
+              <i class="fa-solid fa-mobile"></i>
               <a href="tel:+43555555555">+43 676 123 456</a>
             </div>
             <div class="contact_email">
-              <img src="images/icons/email.png" alt="Email Logo" />
+              <i class="fa-solid fa-envelope"></i>
               <a href="mailto:abs@mustermann.com">oliver.straberger@gmx.at</a>
             </div>
           </div>
