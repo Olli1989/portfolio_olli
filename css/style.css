@@ -25,7 +25,9 @@ body {
 
   font-family: 'Montserrat', arial, sans-serif;
   font-weight: var(--fw-400);
+
 }
+
 
 h1 {
   font-size: 4.5rem;
@@ -74,13 +76,14 @@ nav ul {
 
 nav ul li {
   list-style: none;
+  margin-right: 10px;
 }
 
 nav ul li a {
-  margin-right: 1.5em;
+  padding: 0 .5em;
 }
 
-nav ul li:last-of-type a {
+nav ul li:last-of-type{
   margin-right: 0;
 }
 
@@ -97,6 +100,11 @@ header {
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+
+  height: 75px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .header_flex {
@@ -105,12 +113,114 @@ header {
   align-items: center;
 }
 
+/*--- Humburger Menu ---*/
+#hamburger-menu {
+  display: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  
+}
+
+#hamburger-menu span {
+  display: block;
+  position: relative;
+}
+
+#hamburger-menu span,
+#hamburger-menu span::before,
+#hamburger-menu span::after {
+  background-color: var(--red);
+  width: 30px;
+  height: 3px;
+  border-radius: 15px;
+  transition: transform 250ms ease-in-out;
+}
+
+#hamburger-menu span::before,
+#hamburger-menu span::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+#hamburger-menu span::before{
+  top: 6px;
+}
+
+#hamburger-menu span::after{
+  bottom: 6px;
+}
+
+
+
+.mobile_menu {
+  display: none;
+}
+
+.nav-open .mobile_menu {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+
+  background-color: var(--main-black);
+}
+
+.nav-open .mobile_menu ul{
+  height: 100%;
+  margin: 0;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.nav-open .mobile_menu ul li {
+  margin-right: 0;
+}
+
+.nav-open .mobile_menu ul li a {
+  font-size: 4rem;
+  font-weight: var(--fw-700);
+}
+
+.nav-open .mobile_menu ul li a:hover{
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-open #hamburger-menu span{
+  transform: rotate(.625turn);
+}
+
+.nav-open #hamburger-menu span:before {
+  transform: rotate(90deg) translateX(-6px);
+}
+
+.nav-open #hamburger-menu span:after {
+  opacity: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  #hamburger-menu {
+    display: flex;
+  }
+
+  header nav,
+  header nav+a {
+    display: none;
+  }
+
+}
+
 /*--- Main ---*/
 section {
   min-height: 100vh;
-  display: flex;
-  padding-top: 4em;
-  padding-bottom: 4em;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 section:nth-of-type(2n) {
   background-color: var(--main-black);
@@ -214,7 +324,7 @@ section:nth-of-type(2n) {
   
   position: relative;
   left: -1em;
-  padding: .5em 0 .5em 1em;
+  padding: .5em 1em;
 
   width: calc(100% + 2em);
 
@@ -244,16 +354,20 @@ section:nth-of-type(2n) {
 
 
 /*--- Education & Skill ---*/
-.skill h2 {
-  margin-bottom: 3em;
-}
-
 .skill_container-edu{
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   
   border-right: 3px solid rgba(0, 0, 0, 0.2);
+}
+
+.skill_container-edu > div {
+  margin-bottom: 1em;
+}
+
+.skill_container-edu > div:last-of-type {
+  margin-bottom: 0;
 }
 
 .skill_container-edu p {
@@ -293,7 +407,7 @@ section:nth-of-type(2n) {
 }
 
 .work_choose-card {
-  margin-inline: .5em;
+  margin: 0 .5em .5em;
   background-color: #fff;
   border-radius: .5em;
   transition: all 0.5s ease-in-out;
@@ -368,7 +482,8 @@ section:nth-of-type(2n) {
 
 /*--- Section Contact ---*/
 .form-container {
-  max-width: 60vw;
+  max-width: 670px;
+  width: 95%;
   margin-inline: auto;
 }
 
@@ -473,5 +588,151 @@ footer p {
 
 
 /*--- Media quiery ---*/
-/*
-1024 , 767 , 480
+
+@media screen and (max-width: 940px) {
+  .intro_header {
+    grid-template-columns: min-content;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "text"
+        "desc"
+        "img";
+    justify-content: center;
+    width: 95%;
+  }
+
+  .intro_header p{
+    width: max-content;
+    left:0;
+    justify-content:flex-start;
+  }
+
+  .intro_header img{
+    margin-right: 0;
+  }
+
+  .what .row {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .what .row .col-4 {
+    width: 50%;
+    margin-bottom: 2em;
+  }
+
+  .skill .row{
+    flex-direction: column;
+  }
+
+  .skill .row .col-6 {
+    width: 100%;
+  }
+
+  .skill_container-edu{
+    border: none;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .work_grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contact_tel-email {
+    flex-direction: column;
+  }
+
+  .contact_tel-email > div {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 1em
+  }
+
+  .form_btn {
+    width: 100%;
+  }
+
+
+}
+
+@media screen and (max-width: 767px) {
+  .who > div{
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "title"
+        "subtitle"
+        "text"
+        "img";
+  }
+
+  .who_subtitle {
+    width: max-content;
+    left: 0;
+  }
+
+  .who_img {
+    width: 80%;
+    margin-inline: auto;
+  }
+
+  .who_text {
+    grid-area: text;
+    margin-top: 2em;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .what .row .col-4 {
+    width: 100%;
+  }
+
+  .skill_container-skills{
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+  }
+
+  .work_grid {
+    grid-template-columns: 80%;
+    justify-content: center;
+  }
+
+
+}
+
+@media screen and (max-width: 590px) {
+  .work_grid {
+    grid-template-columns: 100%;
+  }
+
+  .intro_header img {
+    min-width: 280px;
+  }
+}
+
+/*--- Scrollbar ---*/
+/* Customize website's scrollbar like Mac OS
+Not supports in Firefox and IE */
+
+/* total width */
+body::-webkit-scrollbar {
+  background-color: #fff;
+  width: 16px;
+}
+
+/* background of the scrollbar except button or resizer */
+body::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
+/* scrollbar itself */
+body::-webkit-scrollbar-thumb {
+  background-color: #babac0;
+  border-radius: 16px;
+  border: 4px solid #fff;
+}
+
+/* set button(top and bottom of the scrollbar) */
+body::-webkit-scrollbar-button {
+  display:none;
+}

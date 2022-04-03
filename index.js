@@ -1,5 +1,18 @@
 const choose = document.querySelectorAll('.work_choose-card')
 const workGrid = document.querySelector('.work_grid')
+const toggleButton = document.getElementById('hamburger-menu')
+const mobileLinks = document.querySelectorAll('.mobile_links')
+
+toggleButton.addEventListener('click',() => {
+  document.body.classList.toggle('nav-open')
+})
+
+mobileLinks.forEach(ele => {
+  ele.addEventListener('click',()=>{
+    console.log("click")
+    document.body.classList.remove('nav-open')
+  })
+})
 
 
 const react = [{
