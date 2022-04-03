@@ -84,6 +84,10 @@ const workCardGenerater = (arr) =>{
           <h3>${arr[i].title}</h3>
           <p>${arr[i].desc}</p>
         </div>
+        <div class="work_links">
+          <a href="${arr[i].liveUrl}" target="_blank"><i class="fa-solid fa-eye"></i></a>
+          <a href="${arr[i].githubUrl}" target="_blank"><i class="fa-brands fa-github"></i></a>
+        </div>
       </div>
       ` 
 
@@ -93,7 +97,7 @@ const workCardGenerater = (arr) =>{
 }
 
 createAllArray()
-workCardGenerater(all)
+//workCardGenerater(all)
 
 choose.forEach(item => {
   item.addEventListener('click', (e) => {
@@ -110,4 +114,5 @@ choose.forEach(item => {
     }
   })
 })
+
 

@@ -1,6 +1,6 @@
 /*--- Global ---*/
 :root {
-  --main-black: #1c1c1c;
+  --main-black: #303030;
 
   --bc-lightblue: #edf2f8;
 
@@ -12,14 +12,16 @@
   --red: #FB6542;
   --lila: #621BC1;
 
+  --bs: 5px 5px 10px rgba(0,0,0,0.15),
+        2px 2px 4px rgba(0,0,0,0.10);
 
   --fw-400: 400;
   --fw-700: 700;
 }
 
 body {
-  background-color: var(--main-black);
-  color: #fff;
+  background-color: var(--bc-lightblue);
+  color: var(--main-black);
 
   font-family: 'Montserrat', arial, sans-serif;
   font-weight: var(--fw-400);
@@ -50,9 +52,13 @@ header nav + a{
   font-size: 1.5em;
 }
 
+header a {
+  color: var(--red);
+}
+
 a {
   text-decoration: none;
-  color: var(--red);
+  color: black;
 }
 
 header a:hover,
@@ -103,28 +109,26 @@ header {
 section {
   min-height: 100vh;
   display: flex;
-  padding-top: 5em;
+  padding-top: 4em;
   padding-bottom: 4em;
 }
 section:nth-of-type(2n) {
-  background-color: var(--bc-lightblue);
-  color: var(--main-black);
+  background-color: var(--main-black);
+  color: #fff;
 }
 
-/*--- Section Who---*/
-.who {
+.flex-center-screen {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.who_container {
-  max-width: 60vw;
-  margin-inline: auto;
-}
 
-.who_header {
+/*--- Section Intro---*/
+
+.intro_header {
   display: grid;
   grid-template-columns: min-content 1fr;
+  grid-template-rows: auto 100px;
   grid-template-areas: 
     "img text"
     "img desc";
@@ -132,10 +136,10 @@ section:nth-of-type(2n) {
   gap: 1em;
 }
 
-.who_header img{
+.intro_header img{
   grid-area: img;
   min-width: 400px;
-  box-shadow: 5px 5px 10px rgba(255,255,255,0.15);
+  box-shadow: var(--bs);
   margin-right: 1em;
 
   position: relative;
@@ -143,11 +147,12 @@ section:nth-of-type(2n) {
 
 }
 
-.who_header h1 span {
+.intro_header h1 span {
   font-weight: var(--fw-700);
+  color: var(--red)
 }
 
-.who_header p {
+.intro_header p {
   font-size: 1.5rem;
   font-weight: var(--fw-400);
   text-align: right;
@@ -169,12 +174,9 @@ section:nth-of-type(2n) {
 }
 
 
+
 /*--- What i do ---*/
 .what {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
   text-align: center;
 }
 
@@ -182,15 +184,66 @@ section:nth-of-type(2n) {
   margin-bottom: 1.5em;
 }
 
+/*--- Who i am ---*/
+.who {
+  max-width: 1000px;
+  width: 95%;
+  margin-inline: auto;
+}
+
+.who > div{
+  display: grid;
+  grid-template-columns: 1fr 200px;
+  grid-column-gap: 2em;
+  grid-template-areas :
+      "title img"
+      "subtitle img"
+      "text img";
+  
+}
+.who_title {
+  grid-area: title;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.who_subtitle {
+  background-color: var(--red);
+  grid-area: subtitle;
+  grid-column: 1 / -1;
+  
+  position: relative;
+  left: -1em;
+  padding: .5em 0 .5em 1em;
+
+  width: calc(100% + 2em);
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.who_text {
+  grid-area: text;
+  margin-top: 2em;
+  width: 80%;
+}
+
+.who_text p:nth-of-type(1) {
+  margin-bottom: 1em;
+}
+
+.who_img {
+  grid-area: img;
+  box-shadow: var(--bs);
+  position: relative;
+  z-index: 10;
+}
+
 
 
 
 /*--- Education & Skill ---*/
-.skill {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .skill h2 {
   margin-bottom: 3em;
 }
@@ -200,7 +253,7 @@ section:nth-of-type(2n) {
   flex-direction: column;
   justify-content: space-around;
   
-  border-right: 3px solid rgba(50, 50, 50, 0.2);
+  border-right: 3px solid rgba(0, 0, 0, 0.2);
 }
 
 .skill_container-edu p {
@@ -225,6 +278,11 @@ section:nth-of-type(2n) {
 }
 
 /*--- Portfolio Section ---*/
+.work_choose-card,
+.work_card {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
 .work_choose {
   display: flex;
   justify-content: center;
@@ -255,8 +313,6 @@ section:nth-of-type(2n) {
 
 
 
-
-
 .work_grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -267,6 +323,10 @@ section:nth-of-type(2n) {
   background-color: white;
   padding: 2em .5em;
   border-radius: 8px;
+}
+
+.work_card-img img {
+  border-radius: 5px 5px 0 0;
 }
 
 .work_card-hero {
@@ -289,16 +349,24 @@ section:nth-of-type(2n) {
     text-align: center;
 }
 
-
-
-/*--- Section Contact ---*/
-.contact {
+.work_links{
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 
+.work_links i{
+  font-size: 2rem;
+  margin: 0 1rem;
+}
+
+.work_links i:hover {
+  color: var(--red)
+}
+
+
+
+/*--- Section Contact ---*/
 .form-container {
   max-width: 60vw;
   margin-inline: auto;
@@ -323,7 +391,7 @@ section:nth-of-type(2n) {
   justify-content: center;
   align-items: center;
 
-  padding: 1em;
+  padding: 1em 0;
   background-color: #fff;
   border-radius: 20px;
 
@@ -336,6 +404,14 @@ section:nth-of-type(2n) {
   color: black;
   margin-right: .5em;
 }
+
+.contact_tel a:hover,
+.contact_tel a:focus,
+.contact_email a:hover,
+.contact_email a:focus {
+  color: var(--red);
+}
+
 
 form {
   display: flex;
@@ -360,13 +436,23 @@ textarea {
 
 
 .form_btn {
+  width:50%;
+  background-color: #fff;
   border: none;
+  border-radius: 5px;
   text-transform: uppercase;
   letter-spacing: 3px;
   align-self: center;
   cursor: pointer;
-  padding: 20px;
-  border-radius: 5px;
+  padding: 20px; 
+
+  transition: all 0.5s ease-in-out;
+}
+
+.form_btn:focus,
+.form_btn:hover {
+  background-color: var(--red);
+  color: #fff;
 }
 
 
@@ -384,3 +470,8 @@ footer {
 footer p {
   color: var(--main-black);
 }
+
+
+/*--- Media quiery ---*/
+/*
+1024 , 767 , 480
