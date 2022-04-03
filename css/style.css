@@ -187,7 +187,7 @@ section:nth-of-type(2n) {
 /*--- Who i am ---*/
 .who {
   max-width: 1000px;
-  width: 95%;
+  width: 80%;
   margin-inline: auto;
 }
 
