@@ -239,10 +239,10 @@ header {
     font-weight: var(--fw-700);
   }
   
-  .nav-open .mobile_menu ul li a:hover{
+  /*.nav-open .mobile_menu ul li a:hover{
     color: #fff;
     text-decoration: none;
-  }
+  }*/
   
 
   header nav,
@@ -385,7 +385,7 @@ section:nth-of-type(2n) {
 
 .who > div{
   display: grid;
-  grid-template-columns: 1fr 200px;
+  grid-template-columns: 1fr 300px;
   grid-column-gap: 2em;
   grid-template-areas :
       "title img"
@@ -654,6 +654,12 @@ textarea {
 
 }
 
+/*---Link fixed---*/
+.link-fixed {
+  color: var(--red);
+  font-size: 2rem;
+}
+
 
 /*--- Footer ---*/
 footer {
@@ -797,6 +803,9 @@ footer p {
 }
 
 @media screen and (max-width: 590px) {
+  .footer_flex {
+    flex-direction: column;
+  }
   .work_grid {
     grid-template-columns: 100%;
   }
