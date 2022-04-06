@@ -4,18 +4,47 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+
     <title>Porfolio Olli</title>
-    
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="images/site.webmanifest" />
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="msapplication-config" content="images/browserconfig.xml" />
+    <meta name="theme-color" content="#ffffff" /> 
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/grid.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -25,7 +54,7 @@
   <body>
     <header>
       <div class="container header_flex">
-        <a class="logo" href="#intro"><h3>Logo</h3></a>
+        <a class="logo" href="#intro"><h3>< OLL! ></h3></a>
         <nav>
           <ul>
             <li><a href="#what">what</a></li>
@@ -35,8 +64,7 @@
           </ul>
         </nav>
         <a href="#contact">Contact</a>
-        
-        
+
         <nav class="mobile_menu">
           <ul>
             <li><a class="mobile_links" href="#intro">home</a></li>
@@ -48,27 +76,28 @@
           </ul>
         </nav>
 
-        <button id="hamburger-menu">
+        <div id="hamburger-menu">
           <span></span>
-        </button>
-
+          <span></span>
+          <span></span>
+        </div>
       </div>
       <!-- End of Container -->
-
-
     </header>
 
     <main>
-
       <section class="intro flex-center-screen" id="intro">
-        
         <div class="intro_header">
           <img src="images/who-olli.jpg" alt="Olli photo" />
-          <h1>Hi, i am <br /><span>Olli</span></h1>
-          <p>Front-end Dev</p>
+          <h1>
+            H<span class="i-punkt-orange">i</span>, I am <br /><span class="intro_accient"
+              >Oll<span class="i-punkt-black">i</span></span
+            >
+          </h1>
+          <p>Frontend Dev</p>
         </div>
-        
       </section>
+      <div class="triangle"></div>
 
       <section class="what flex-center-screen" id="what">
         <div class="container">
@@ -83,50 +112,57 @@
                 sequi nobis provident vero!
               </p>
             </div>
-              <div class="col-4">
-                <h3>WordPress</h3>
-                <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos
-                  repellendus consectetur modi ipsum asperiores molestiae
-                  corporis tempore quaerat et quae, amet quis. Ipsam temporibus
-                  iure fugit sequi nobis provident vero!
-                </p>
-              </div>
-              <div class="col-4">
-                <h3>E-Commerce</h3>
-                <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos
-                  repellendus consectetur modi ipsum asperiores molestiae
-                  corporis tempore quaerat et quae, amet quis. Ipsam temporibus
-                  iure fugit sequi nobis provident vero!
-                </p>
-              </div>
+            <div class="col-4">
+              <h3>WordPress</h3>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos
+                repellendus consectetur modi ipsum asperiores molestiae corporis
+                tempore quaerat et quae, amet quis. Ipsam temporibus iure fugit
+                sequi nobis provident vero!
+              </p>
+            </div>
+            <div class="col-4">
+              <h3>E-Commerce</h3>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos
+                repellendus consectetur modi ipsum asperiores molestiae corporis
+                tempore quaerat et quae, amet quis. Ipsam temporibus iure fugit
+                sequi nobis provident vero!
+              </p>
             </div>
           </div>
         </div>
       </section>
-
+      <div class="triangle2"></div>
       <section class="who container flex-center-screen" id="who">
         <div>
           <h2 class="who_title">Who I am</h2>
           <p class="who_subtitle">Self thought developer based in Linz</p>
           <div class="who_text">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, atque quo commodi architecto praesentium, vero perferendis in, quis labore suscipit veniam cumque enim natus explicabo perspiciatis magni quae qui tenetur!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, atque quo commodi architecto praesentium, vero perferendis in, quis labore suscipit veniam cumque enim natus explicabo perspiciatis magni quae qui tenetur!</p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis,
+              atque quo commodi architecto praesentium, vero perferendis in,
+              quis labore suscipit veniam cumque enim natus explicabo
+              perspiciatis magni quae qui tenetur!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis,
+              atque quo commodi architecto praesentium, vero perferendis in,
+              quis labore suscipit veniam cumque enim natus explicabo
+              perspiciatis magni quae qui tenetur!
+            </p>
           </div>
-          <img class="who_img" src="images/olli.jpg" alt="Photo of me">
+          <img class="who_img" src="images/olli.jpg" alt="Photo of me" />
         </div>
-        
       </section>
-
+      <div class="triangle"></div>
       <section class="skill flex-center-screen" id="skill">
         <div class="container">
           <h2>Education & Skills</h2>
           <div class="row">
-
             <div class="col-6 skill_container-edu">
               <div>
-                <h3>HTL Paul Hahn</h2>
+                <h3>HTL Paul Hahn</h3>
                 <p>HTL Matura Informationstechnologie</p>
               </div>
               <div>
@@ -198,28 +234,19 @@
                 <p>Typescript</p>
               </div>
             </div>
-            
           </div>
         </div>
         <!-- End of Container -->
       </section>
-
+      <div class="triangle2"></div>
       <section class="work" id="work">
         <div class="container">
           <h2>My Portfolio Section</h2>
           <div class="work_choose">
-            <button class="work_choose-card">
-              React
-            </button>
-            <button class="work_choose-card">
-              CSS/HTML
-            </button>
-            <button class="work_choose-card">
-              Java
-            </button>
-            <button class="work_choose-card">
-              ALL
-            </button>
+            <button class="work_choose-card">React</button>
+            <button class="work_choose-card">CSS/HTML</button>
+            <button class="work_choose-card">Java</button>
+            <button class="work_choose-card">ALL</button>
           </div>
 
           <div class="work_grid">
@@ -244,6 +271,8 @@
         <!-- End of Container -->
       </section>
 
+      <div class="triangle3"></div>
+
       <section class="contact flex-center-screen" id="contact">
         <div class="form-container">
           <h2>Contact me & let's have a talk</h2>
@@ -255,12 +284,11 @@
             </div>
             <div class="contact_email">
               <i class="fa-solid fa-envelope"></i>
-              <a href="mailto:abs@mustermann.com">oliver.straberger@gmx.at
-              </a>
+              <a href="mailto:abs@mustermann.com">oliver.straberger@gmx.at </a>
             </div>
           </div>
 
-          <form action="" method="post">
+          <form action="index.html" method="post">
             <input type="text" name="name" id="name" placeholder="Your Name" />
             <input
               type="email"
@@ -288,11 +316,11 @@
       <div class="container footer_flex">
         <nav>
           <ul>
-            <li><a href="#">Imprint</a></li>
+            <li><a href="imprint.html">Imprint</a></li>
             <li><a href="#">Privacy</a></li>
           </ul>
         </nav>
-        <p>&copy; 2022 - Olli</p>
+        <p>Copyright &copy; 2022 - Olli</p>
       </div>
       <!-- End of Container -->
     </footer>
