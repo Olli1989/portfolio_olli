@@ -9,7 +9,6 @@ toggleButton.addEventListener('click',() => {
 
 mobileLinks.forEach(ele => {
   ele.addEventListener('click',()=>{
-    console.log("click")
     document.body.classList.remove('nav-open')
   })
 })
@@ -21,7 +20,7 @@ const react = [{
   title: 'Instagram Clone',
   desc: 'Instagram Clone Tutorial with Scrimba',
   liveUrl: '',
-  githubUrl: ''
+  githubUrl: 'https://github.com/Olli1989/Instagram-Clone'
 },
 {
   imgUrl: 'images/about01.png',
@@ -29,40 +28,40 @@ const react = [{
   title: 'Quizapp',
   desc: 'Million Dollar Show',
   liveUrl: '',
-  githubUrl: ''
+  githubUrl: 'https://github.com/Olli1989/Quizapp'
 }]
 
 const cssHtml = [{
-  imgUrl: 'images/about01.png',
+  imgUrl: 'images/nft-card-preview.jpg',
   category: 'CSS/HTML',
   title: 'NFT Preview Card',
   desc: 'Frontend Mentor - NFT Preview Card',
-  liveUrl: '',
-  githubUrl: ''
+  liveUrl: 'https://olli1989.github.io/nft-preview-card-component/',
+  githubUrl: 'https://github.com/Olli1989/nft-preview-card-component'
 },
 {
-  imgUrl: 'images/about01.png',
+  imgUrl: 'images/stats-prev-card.jpg',
   category: 'CSS/HTML',
   title: 'Stats Preview Card',
   desc: 'Frontend Mentor - Stats Preview Card',
-  liveUrl: '',
-  githubUrl: ''
+  liveUrl: 'https://olli1989.github.io/stats-preview-card/',
+  githubUrl: 'https://github.com/Olli1989/stats-preview-card'
 },
 {
-  imgUrl: 'images/about01.png',
+  imgUrl: 'images/3-column-preview.jpg',
   category: 'CSS/HTML',
   title: '3 Column Preview Card',
   desc: 'Frontend Mentor - 3 Column Preview Card',
-  liveUrl: '',
-  githubUrl: ''
+  liveUrl: 'https://olli1989.github.io/3-column-preview-card/',
+  githubUrl: 'https://github.com/Olli1989/3-column-preview-card'
 },
 {
-  imgUrl: 'images/about01.png',
+  imgUrl: 'images/social-proof-section.jpg',
   category: 'CSS/HTML',
   title: 'Social Proof Section',
   desc: 'Frontend Mentor - Social Proof Section',
-  liveUrl: '',
-  githubUrl: ''
+  liveUrl: 'https://olli1989.github.io/social-proof-section/',
+  githubUrl: 'https://github.com/Olli1989/social-proof-section'
 }]
 const java = []
 
@@ -76,7 +75,6 @@ const createAllArray = ()=> {
   java.map(ele => {
     all.push(ele)
   })
-  console.log(all)
 }
 
 
@@ -110,14 +108,13 @@ const workCardGenerater = (arr) =>{
 }
 
 createAllArray()
-//workCardGenerater(all)
+workCardGenerater(all)
 
 choose.forEach(item => {
   item.addEventListener('click', (e) => {
     let workButton = e.target.innerText
     if (workButton== 'REACT'){
       workCardGenerater(react)
-      console.log("allo")
     } else if(workButton== 'CSS/HTML') {
       workCardGenerater(cssHtml)
     } else if(workButton== 'Java') {

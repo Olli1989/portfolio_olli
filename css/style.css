@@ -269,23 +269,27 @@ section:nth-of-type(2n) {
   align-items: center;
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
 .triangle {
   border-bottom: 80px solid var(--main-black);
-  border-right: calc(100vw - 22px) solid transparent;
+  border-right: 100vw solid transparent;
   height: 80px;
 }
 
+
 .triangle2 {
   border-top: 80px solid var(--main-black);
-  border-left: calc(100vw - 22px) solid transparent;
+  border-left: 100vw  solid transparent;
   height: 80px;
-  
 }
 
 .triangle3 {
   border-bottom: 80px solid var(--main-black);
-  border-left: calc(50vw - 11px) solid transparent;
-  border-right: calc(50vw - 11px) solid transparent;
+  border-left: 50vw solid transparent;
+  border-right: 50vw solid transparent;
 }
 
 /*--- Section Intro---*/
@@ -512,6 +516,16 @@ section:nth-of-type(2n) {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1em;
+}
+
+.work_card-img{
+  aspect-ratio: 4/3;
+}
+
+.work_card-img img{
+  object-fit: cover;
+  -o-object-fit: cover;
+  height: 100%;
 }
 
 .work_card {
@@ -819,6 +833,19 @@ footer p {
   }
 }
 
+/*--- Imprint ---*/
+.imprint {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.imprint h1 {
+  text-transform: uppercase;
+}
+
 /*--- Scrollbar ---*/
 /* Customize website's scrollbar like Mac OS
 Not supports in Firefox and IE */
@@ -844,17 +871,4 @@ body::-webkit-scrollbar-thumb {
 /* set button(top and bottom of the scrollbar) */
 body::-webkit-scrollbar-button {
   display:none;
-}
-
-/*--- Imprint ---*/
-.imprint {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.imprint h1 {
-  text-transform: uppercase;
 }
