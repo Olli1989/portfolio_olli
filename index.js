@@ -101,10 +101,18 @@ const workCardGenerater = (arr) =>{
         </div>
       </div>
       ` 
-
-    }
-    workGrid.innerHTML = html
+    } 
+  } else {
+    html += `<div></div>`
   }
+  
+  workGrid.innerHTML = html
+}
+
+const clearActive = () => {
+  choose.forEach(ele => {
+    ele.classList.remove('choose-active')
+  })
 }
 
 createAllArray()
@@ -113,13 +121,18 @@ workCardGenerater(all)
 choose.forEach(item => {
   item.addEventListener('click', (e) => {
     let workButton = e.target.innerText
+    clearActive()
     if (workButton== 'REACT'){
+      item.classList.add('choose-active')
       workCardGenerater(react)
     } else if(workButton== 'CSS/HTML') {
+      item.classList.add('choose-active')
       workCardGenerater(cssHtml)
-    } else if(workButton== 'Java') {
+    } else if(workButton== 'JAVA') {
+      item.classList.add('choose-active')
       workCardGenerater(java)
     } else if(workButton== 'ALL') {
+      item.classList.add('choose-active')
       workCardGenerater(all)
     }
   })

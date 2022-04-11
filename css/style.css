@@ -1,22 +1,15 @@
 /*--- Global ---*/
 :root {
   --main-black: #303030;
-
   --bc-lightblue: #dfdfdf;
-
-  --fc-red: rgb(97, 17, 17);
-
-  --yellow: #FEE934;
-  --blue: #1546BF;
-  --lightblue: #89ffc4;
   --red: #FB6542;
-  --lila: #621BC1;
 
   --bs: 5px 5px 10px rgba(0,0,0,0.15),
         2px 2px 4px rgba(0,0,0,0.10);
 
   --fw-400: 400;
   --fw-700: 700;
+
 }
 
 body {
@@ -28,6 +21,9 @@ body {
 
 }
 
+p{
+  font-size: 1.2rem;
+}
 
 h1 {
   margin-top: 1rem;
@@ -502,15 +498,19 @@ section:nth-of-type(2n) {
   text-transform: uppercase;
 }
 
+.choose-active {
+  background-color: var(--red);
+  color: #fff;
+}
+
+/*
 @media screen and (min-width: 1024px){
   .work_choose-card:hover,
   .work_choose-card:focus {
     background-color: var(--red);
     color: #fff;
   }
-}
-
-
+}*/
 
 .work_grid {
   display: grid;
@@ -530,7 +530,8 @@ section:nth-of-type(2n) {
 
 .work_card {
   background-color: white;
-  padding: 2em .5em;
+  padding: 2em 1em;
+  border-radius: 15px;
 }
 
 .work_card-hero {
