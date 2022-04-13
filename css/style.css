@@ -3,7 +3,7 @@
   --main-black: #303030;
   --bc-lightblue: #dfdfdf;
   --red: #FB6542;
-
+ 
   --bs: 5px 5px 10px rgba(0,0,0,0.15),
         2px 2px 4px rgba(0,0,0,0.10);
 
@@ -831,6 +831,10 @@ footer p {
 
   nav ul{
     flex-wrap: wrap;
+  }
+
+  footer nav ul {
+    margin-bottom: 0;
   }
 }
 
