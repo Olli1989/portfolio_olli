@@ -15,7 +15,7 @@ mobileLinks.forEach(ele => {
 
 
 const react = [{
-  imgUrl: 'images/about01.png',
+  imgUrl: 'images/default-portfolio-background.jpg',
   category: 'React',
   title: 'Instagram Clone',
   desc: 'Instagram Clone Tutorial with Scrimba',
@@ -23,12 +23,12 @@ const react = [{
   githubUrl: 'https://github.com/Olli1989/Instagram-Clone'
 },
 {
-  imgUrl: 'images/about01.png',
+  imgUrl: 'images/default-portfolio-background.jpg',
   category: 'React',
   title: 'Quizapp',
-  desc: 'Million Dollar Show',
+  desc: 'Scrimba Challenge - Quizapp with question api',
   liveUrl: '',
-  githubUrl: 'https://github.com/Olli1989/Quizapp'
+  githubUrl: 'https://github.com/Olli1989/Project-Quizapp'
 }]
 
 const cssHtml = [{
@@ -63,7 +63,16 @@ const cssHtml = [{
   liveUrl: 'https://olli1989.github.io/social-proof-section/',
   githubUrl: 'https://github.com/Olli1989/social-proof-section'
 }]
-const java = []
+const js = [
+  {
+    imgUrl: 'images/default-portfolio-background.jpg',
+    category: 'JS',
+    title: 'Javascript Games',
+    desc: 'Javascript games for Codersbay',
+    liveUrl: '',
+    githubUrl: 'https://github.com/Olli1989/js-games'
+  }
+]
 
 let all = []
 
@@ -72,7 +81,7 @@ const createAllArray = ()=> {
   cssHtml.map(ele => {
     all.push(ele)
   })
-  java.map(ele => {
+  js.map(ele => {
     all.push(ele)
   })
 }
@@ -96,8 +105,15 @@ const workCardGenerater = (arr) =>{
           <p>${arr[i].desc}</p>
         </div>
         <div class="work_links">
+        `
+        if(!arr[i].liveUrl){
+          html += `<a href="${arr[i].githubUrl}" target="_blank"><i class="fa-brands fa-github"></i></a>`
+        } else {
+          html += `
           <a href="${arr[i].liveUrl}" target="_blank"><i class="fa-solid fa-eye"></i></a>
-          <a href="${arr[i].githubUrl}" target="_blank"><i class="fa-brands fa-github"></i></a>
+          <a href="${arr[i].githubUrl}" target="_blank"><i class="fa-brands fa-github"></i></a>`
+        }
+        html += `
         </div>
       </div>
       ` 
@@ -128,9 +144,9 @@ choose.forEach(item => {
     } else if(workButton== 'CSS/HTML') {
       item.classList.add('choose-active')
       workCardGenerater(cssHtml)
-    } else if(workButton== 'JAVA') {
+    } else if(workButton== 'JS') {
       item.classList.add('choose-active')
-      workCardGenerater(java)
+      workCardGenerater(js)
     } else if(workButton== 'ALL') {
       item.classList.add('choose-active')
       workCardGenerater(all)
